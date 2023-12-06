@@ -127,20 +127,41 @@ p{
 .score{
     display: flex;
     align-items: center;
+    
 }
 
 .sb1{
     background-color: rgba(253, 228, 228, 0.767);
-    
+    animation: movement 1s ease-in normal;
+    transition: 1s ease;
+    /* animation-delay: 0.25s * var(--i); */
+}
+@keyframes movement{
+    0%{
+        transform: translateX(-50px) rotateZ(-330deg);
+    }
+
+    100%{
+        transform:  translateX(0px) rotateZ(-360deg); 
+    }
 }
 .sb2{
     background-color: rgba(249, 253, 228, 0.767);
+    animation: movement 1s ease-in normal;
+    transition: 2s ease;
+    /* animation-delay: 0.25s ; */
 }
 .sb3{
     background-color: rgba(228, 253, 232, 0.767);
+    animation: movement 1s ease-in normal;
+    transition: 3s ease;
+    /* animation-delay: 0.50s ; */
 }
 .sb4{
     background-color: rgba(228, 236, 253, 0.767);
+    animation: movement 1s ease-in normal;
+    transition: 4s ease;
+    /* animation-delay: 0.75s ; */
 }
 
 .titulo1{
@@ -164,4 +185,24 @@ p{
     color: aliceblue;
     border-radius: 2rem;
     cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+   
+}
+
+@media (max-width:875px){
+    .interface{
+        width: 375px;
+    }
+    .screen{
+        width: 375px;
+    }
+
+    .summary h1{
+        transform: translateX(0%);
+    }
+
 }
